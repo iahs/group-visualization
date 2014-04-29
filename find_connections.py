@@ -3,7 +3,7 @@ import json
 import re
 import random
 
-MIN_CONS = 200
+MIN_CONS = 250
 MAX_CONS = 3000
 INFILE = 'lists'
 OUTFILE = 'lists.json'
