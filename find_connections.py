@@ -3,7 +3,8 @@ import json
 import re
 import random
 
-MIN_CONS = 500
+MIN_CONS = 200
+MAX_CONS = 3000
 INFILE = 'lists'
 OUTFILE = 'lists.json'
 
@@ -36,7 +37,7 @@ for line in lines:
         working_list = line[:-1]
         lists[working_list] = []
 for working_list in lists:
-    if len(lists[working_list]) < MIN_CONS:
+    if len(lists[working_list]) < MIN_CONS or len(lists[working_list]) > MAX_CONS:
         continue
     if working_list[:5] == 'class':
         continue
